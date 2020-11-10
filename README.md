@@ -1,2 +1,2 @@
-# image_and_action
+# Image & Action
 Project for Image &amp; Action board game
