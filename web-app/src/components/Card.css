@@ -1,0 +1,19 @@
+.Card {
+    width: 790px;
+    height: 550px;
+    margin: auto;
+}
+
+.Background {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Phrase {
+    margin: 4.5%;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+}
