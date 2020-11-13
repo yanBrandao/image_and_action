@@ -17,3 +17,29 @@
     font-weight: 700;
     font-style: italic;
 }
+
+.Rotate {
+    animation: RotateCard 0.5s;
+}
+
+.FinishRotate {
+    animation: RotateFinishCard 0.5s;
+}
+
+@keyframes RotateCard {
+    0% {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+}
+
+@keyframes RotateFinishCard {
+    0% {
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
