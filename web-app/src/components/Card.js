@@ -20,7 +20,13 @@ class Card extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggle: false
+            toggle: false,
+            personWord: 'Carpinteiro',
+            objectWord: 'Faca',
+            actionWord: 'Calar',
+            mixWord: 'Quadrado',
+            hardWord: 'Carburador',
+            funWord: 'Ping-Pong'
         };
         this.rotate = this.rotate.bind(this);
         this.card = React.createRef();
@@ -40,24 +46,29 @@ class Card extends Component {
                     toggle: !state.toggle
                 };
             });
+            if(this.state.toggle) {
+                this.setState({
+                    personWord: Math.random()
+                })
+            }
         }.bind(this), 500)
 
     }
 
     render() {
-        const { toggle } = this.state;
+        const { toggle, personWord, objectWord, actionWord, mixWord, hardWord, funWord } = this.state;
 
         return (
             <div className="Background">
                 <div className={'Card'}
                      ref={this.card}
                      onClick={this.rotate} style={toggle ? cardStyle : cardFront}>
-                    <p className="Phrase">{toggle ? 'Carpinteiro' : ''}</p>
-                    <p className="Phrase">{toggle ? 'Faca' : '' }</p>
-                    <p className="Phrase">{toggle ? 'Calar' : '' }</p>
-                    <p className="Phrase">{toggle ? 'Carburador' : '' }</p>
-                    <p className="Phrase">{toggle ? 'Ping-Pong' : '' }</p>
-                    <p className="Phrase">{toggle ? 'Quadrado' : '' }</p>
+                    <p className="Word">{toggle ? personWord: ''}</p>
+                    <p className="Word">{toggle ? objectWord : '' }</p>
+                    <p className="Word">{toggle ? actionWord : '' }</p>
+                    <p className="Word">{toggle ? hardWord : '' }</p>
+                    <p className="Word">{toggle ? funWord : '' }</p>
+                    <p className="Word">{toggle ? mixWord : '' }</p>
                 </div>
 
             </div>

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: ia_database
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+    ports:
+    - "5433:5432"
+  consul:
+    container_name: ia_consul
+    image: consul:latest
+    environment:
+      - CONSUL_BIND_INTERFACE=wlp2s0
+    network_mode: host
