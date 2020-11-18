@@ -8,6 +8,7 @@ import br.tapajos.example.adapter.input.web.converter.toDomain
 import br.tapajos.example.adapter.input.web.converter.toResponse
 import br.tapajos.example.adapter.input.web.converter.toResponseId
 import br.tapajos.example.application.port.input.CreateCardUseCase
+import br.tapajos.example.application.port.input.CreateRandomCardUseCase
 import br.tapajos.example.application.port.input.GetByIdCardUseCase
 import net.logstash.logback.argument.StructuredArguments.kv
 import org.springframework.stereotype.Service
@@ -18,7 +19,8 @@ import tapajos.webservice.starter.commons.logger.logger
 @RestController
 class CardController(
         private val createCardUseCase: CreateCardUseCase,
-        private val getByIdCardUseCase: GetByIdCardUseCase
+        private val getByIdCardUseCase: GetByIdCardUseCase,
+        private val createRandomCardUseCase: CreateRandomCardUseCase
 ): CardAPI {
     private val logger = logger<CardController>()
     override fun card(cardRequest: CardRequest): CardIdResponse {
@@ -37,6 +39,15 @@ class CardController(
                 kv("card_id", cardId)
         )
         val card = getByIdCardUseCase.execute(cardId)
+        logger.info("Responding successfully the request with [{}]",
+                kv("card_id", card.id)
+        )
+        return card.toResponse()
+    }
+
+    override fun randomCard(isToSaveUsedCard: Boolean): CardResponse {
+        logger.info("Starting request to get random Card.")
+        val card = createRandomCardUseCase.execute(isToSaveUsedCard)
         logger.info("Responding successfully the request with [{}]",
                 kv("card_id", card.id)
         )

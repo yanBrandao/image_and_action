@@ -1,19 +1,16 @@
 package br.tapajos.example.application.domain
 
+import org.apache.logging.log4j.util.Strings.EMPTY
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 
 @Entity
-data class Card(
+data class Mix(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
-        val personWord: String = "",
-        val objectWord: String = "",
-        val mixWord: String = "",
-        val hardWord: String = "",
-        val actionWord: String = "",
-        val funWord: String = ""
-)
+        val name: String = EMPTY,
+        override var used: Boolean = false
+): Phrase

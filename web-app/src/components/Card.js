@@ -38,21 +38,39 @@ class Card extends Component {
     rotate() {
         this.card.current.className = 'Card Rotate'
         console.log(this.card.current.className)
-        setTimeout(function() { //Start the timer
+        setTimeout(async function () { //Start the timer
             this.card.current.className = 'Card FinishRotate' //After 1 second, set render to true
             console.log(this.card.current.className)
-            this.setState(function(state) {
+            this.setState(function (state) {
                 return {
                     toggle: !state.toggle
                 };
             });
-            if(this.state.toggle) {
-                this.setState({
-                    personWord: Math.random()
-                })
+            if (this.state.toggle) {
+                // this.setState({
+                //     personWord: Math.random()
+                // })
+                await this.getCard();
             }
         }.bind(this), 500)
+    }
 
+    getCard() {
+        fetch("http://localhost:8080/v1/cards/random", {
+            "method": "GET"
+        }).then(response => response.json())
+            .then(response => {
+                console.log(response)
+                this.setState({
+                    personWord: response.personWord,
+                    objectWord: response.objectWord,
+                    actionWord: response.actionWord,
+                    mixWord: response.mixWord,
+                    hardWord: response.hardWord,
+                    funWord: response.funWord
+                })
+            })
+            .catch(err => { console.log(err); });
     }
 
     render() {

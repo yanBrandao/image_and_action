@@ -1,5 +1,6 @@
 package br.tapajos.example.adapter.input.web.api
 
+import br.tapajos.example.adapter.input.web.api.const.Const.Companion.HEADER_SAVE_USED_PHRASES
 import br.tapajos.example.adapter.input.web.api.request.CardRequest
 import br.tapajos.example.adapter.input.web.api.response.CardIdResponse
 import br.tapajos.example.adapter.input.web.api.response.CardResponse
@@ -19,6 +20,14 @@ interface CardAPI {
     @ResponseStatus(CREATED)
     @PostMapping(consumes = [APPLICATION_JSON_VALUE])
     fun card(@RequestBody cardRequest: CardRequest): CardIdResponse
+
+    @ApiOperation(value = "Get random card")
+    @ApiResponse(code = 200, message = "OK")
+    @ResponseStatus(OK)
+    @GetMapping(path = ["/random"])
+    fun randomCard(
+            @RequestHeader(HEADER_SAVE_USED_PHRASES) isToSaveUsedCard: Boolean = false
+    ): CardResponse
 
     @ApiOperation(value = "Get some card")
     @ApiResponse(code = 200, message = "OK")

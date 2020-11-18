@@ -5,5 +5,6 @@ data class CardResponse(
         val mixWord: String,
         val objectWord: String,
         val hardWord: String,
-        val peopleWord: String
+        val personWord: String,
+        val funWord: String
 )
