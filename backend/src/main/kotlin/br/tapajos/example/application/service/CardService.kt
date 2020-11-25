@@ -1,11 +1,18 @@
 package br.tapajos.example.application.service
 
+import br.tapajos.example.application.convert.toType
 import br.tapajos.example.application.domain.*
 import br.tapajos.example.application.port.input.CreateCardUseCase
 import br.tapajos.example.application.port.input.CreateRandomCardUseCase
 import br.tapajos.example.application.port.input.GetByIdCardUseCase
+import br.tapajos.example.application.port.input.UploadPersonUseCase
 import br.tapajos.example.application.port.output.*
 import org.springframework.stereotype.Service
+import org.springframework.web.multipart.MultipartFile
+import tapajos.webservice.starter.commons.logger.logger
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
 
 @Service
 class CardService(
@@ -16,7 +23,9 @@ class CardService(
         private val objectRepositoryPort: ObjectRepositoryPort,
         private val funRepositoryPort: FunRepositoryPort,
         private val actionRepositoryPort: ActionRepositoryPort
-) : CreateCardUseCase, CreateRandomCardUseCase, GetByIdCardUseCase {
+) : CreateCardUseCase, CreateRandomCardUseCase, GetByIdCardUseCase, UploadPersonUseCase {
+    val logger = logger<CardService>()
+
     override fun execute(card: Card): Card {
         return cardRepositoryPort.save(card)
     }
@@ -55,5 +64,28 @@ class CardService(
         )
     }
 
-
+    override fun execute(file: MultipartFile) {
+        val bytes = file.bytes
+        var count = 0;
+        val rows = String(bytes).split("\n")
+        rows.forEach {
+            val split = it.split(",")
+            try {
+                count ++
+                logger.info("Saving ${split[0]} with category ${split[1]}")
+                when (split[1].toType()) {
+                    Type.F -> funRepositoryPort.save(Fun(name = split[0]))
+                    Type.M -> mixRepositoryPort.save(Mix(name = split[0]))
+                    Type.A -> actionRepositoryPort.save(Action(name = split[0]))
+                    Type.O -> objectRepositoryPort.save(Objectt(name = split[0]))
+                    Type.H -> hardRepositoryPort.save(Hard(name = split[0]))
+                    Type.P -> personRepositoryPort.save(Person(name = split[0]))
+                }
+            } catch (ex: Exception) {
+                count--
+                logger.error("Could not add ${split[0]} cause of ${ex.message}")
+            }
+        }
+        logger.info("Phrase(s) $count saved")
+    }
 }

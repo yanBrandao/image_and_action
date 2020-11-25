@@ -6,14 +6,17 @@ import br.tapajos.example.adapter.input.web.api.response.PersonResponse
 import br.tapajos.example.adapter.input.web.converter.toDomain
 import br.tapajos.example.adapter.input.web.converter.toResponse
 import br.tapajos.example.application.port.input.CreatePersonUseCase
+import br.tapajos.example.application.port.input.UploadPersonUseCase
 import net.logstash.logback.argument.StructuredArguments
 import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.multipart.MultipartFile
 import tapajos.webservice.starter.commons.extension.objectToJson
 import tapajos.webservice.starter.commons.logger.logger
 
 @RestController
 class PersonController(
-        val createPersonUseCase: CreatePersonUseCase
+        val createPersonUseCase: CreatePersonUseCase,
+        val uploadPersonUseCase: UploadPersonUseCase
 ): PersonAPI {
     private val logger = logger<PersonController>()
     override fun person(personRequest: PersonRequest): PersonResponse {
@@ -25,6 +28,10 @@ class PersonController(
                 StructuredArguments.kv("person_id", person.id)
         )
         return person.toResponse()
+    }
+
+    override fun upload(file: MultipartFile) {
+        uploadPersonUseCase.execute(file)
     }
 
     override fun getPerson(personId: Long): PersonResponse {

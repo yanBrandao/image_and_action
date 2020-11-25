@@ -38,8 +38,8 @@ class Card extends Component {
     rotate() {
         this.card.current.className = 'Card Rotate'
         console.log(this.card.current.className)
-        setTimeout(async function () { //Start the timer
-            this.card.current.className = 'Card FinishRotate' //After 1 second, set render to true
+        setTimeout(async function () {
+            this.card.current.className = 'Card FinishRotate'
             console.log(this.card.current.className)
             this.setState(function (state) {
                 return {
@@ -47,9 +47,6 @@ class Card extends Component {
                 };
             });
             if (this.state.toggle) {
-                // this.setState({
-                //     personWord: Math.random()
-                // })
                 await this.getCard();
             }
         }.bind(this), 500)

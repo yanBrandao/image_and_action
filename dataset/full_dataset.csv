@@ -1,0 +1,516 @@
+Carpinteiro,Person
+Professor,Person
+Golfinho,Person
+Ganso,Person
+Atum,Person
+Girafa,Person
+Porco,Person
+Mosquito,Person
+Javali,Person
+Borboleta,Person
+Camelo,Person
+Falar,Action
+Comer,Action
+Andar,Action
+Pega-Pega,Fun
+Manja se econde,Fun
+Carburador,Hard
+Ar condicionado,Hard
+Bebida,Mix
+Limonada,Mix
+Cerveja,Mix
+Faca,Object
+Garfo,Object
+Tijolo,Object
+Cavalo,Person
+Cachorro,Person
+Caranguejo,Person
+Chimpanzé,Person
+Coelho,Person
+Jacaré,Person
+Elefante,Person
+Galinha,Person
+Leão,Person
+Gato,Person
+Sapo,Person
+Veado,Person
+Tigre,Person
+Grilo,Person
+Formiga,Person
+Abelha,Person
+Hipopótamo,Person
+Capivara,Person
+Esquilo,Person
+Rato,Person
+Maca,Hard
+Templo,Hard
+Cápsula,Hard
+Estrada,Hard
+Planeta terra,Hard
+Estojo,Hard
+Paraíso,Hard
+Estrela,Hard
+Trem,Hard
+Infinito,Hard
+O Poderoso Chefão,Fun
+Pulp Fiction,Fun
+2001: Uma Odisseia no Espaço,Fun
+Guerra nas Estrelas,Fun
+Forrest Gump,Fun
+Beleza Americana,Fun
+Laranja Mecânica,Fun
+O Iluminado,Fun
+Clube da Luta,Fun
+Psicose,Fun
+Jurassic Park,Fun
+Taxi Driver,Fun
+Batman – O Cavaleiro das Trevas,Fun
+Crepúsculo,Fun
+O Fabuloso Destino de Amelie Poulain,Fun
+O Rei Leão,Fun
+Matrix,Fun
+A Bela Adormecida,Fun
+Os Caça-Fantasmas,Fun
+Dumbo,Fun
+Rocky,Fun
+Cães de Aluguel,Fun
+A Dama e o Vagabundo,Fun
+O Amor É Cego,Fun
+E.T.,Fun
+Fogão,Object
+Geladeira,Object
+Mesa,Object
+Cadeira,Object
+Armário,Object
+Microondas,Object
+Batedeira,Object
+Liquidificador,Object
+Processador de alimentos,Object
+Forno elétrico,Object
+Panelas,Object
+Copo,Object
+Prato,Object
+Chaleira com bico,Object
+Formas,Object
+Panela de pressão,Object
+Xícara,Object
+Pote,Object
+Garrafa,Object
+Califórnia,Person
+Garrafa térmica,Object
+Deslizar,Action
+Purgatório,Hard
+Oscar,Fun
+Perdão,Mix
+Buraco,Person
+Túmulo,Object
+fazer a cama,Action
+Cafuné,Hard
+Woody Allen,Fun
+Neil Armstrong (astronauta),Mix
+alicate,Object
+espiar,Action
+hospício,Hard
+sininho,Fun
+lobisomen,Mix
+trabalhador,Person
+pergaminho,Object
+atingir,Action
+retina,Hard
+platéia,Fun
+sorvete,Mix
+médico,Person
+discos,Object
+adornar,Action
+atentado ao pudor,Hard
+Manoel Bandeira,Fun
+letra,Mix
+coluna vertebral,Person
+Liquidificador,Object
+dançar,Action
+polígono,Hard
+escultura,Fun
+pivô,Mix
+intelectual,Person
+massa de modelar,Object
+pregar,Action
+cocuruto,Hard
+Brucutu,Fun
+Apple (computador),Mix
+piranha,Person
+conta (de restaurante),Object
+encher linguiça,Action
+vínculo,Hard
+ficção científica,Fun
+proa,Mix
+coroinha,Person
+mamona,Object
+atropelar,Action
+capô (do carro),Hard
+Um linda mulher,Fun
+fumaça,Mix
+intestino,Person
+abridor de garrafas,Object
+esfregar,Action
+férias,Hard
+hóquei no gelo,Fun
+baixela de prata,Mix
+macho,Person
+Porta-guardanapo,Object
+correr,Action
+apito final,Hard
+talismã,Fun
+arraia,Person
+lua cheia,Object
+catar,Action
+moqueca,Hard
+rali,Fun
+santo,Mix
+lagoa,Person
+recheio,Object
+abocanhar,Action
+vanguarda,Hard
+filme,Fun
+toque,Mix
+alquimista,Person
+terno,Object
+telegrafar,Action
+cabide de empregos,Hard
+João Gilberto,Fun
+além,Mix
+xereta,Person
+torta de morango,Object
+derrubar,Action
+calo,Hard
+Os Pássaros,Fun
+corado,Mix
+racista,Person
+canivete,Object
+apalpar,Action
+vitamina,Hard
+Montanha-russa,Fun
+sinal da cruz,Mix
+carne,Person
+capa de chuva,Object
+filar um cigarro,Action
+judiciário,Hard
+colcheia,Fun
+madrugada,Mix
+ladeira,Person
+sarcófago,Object
+esbravejar,Action
+tribuna,Hard
+festa de aniversário,Fun
+ameixa,Mix
+máscara,Person
+bateria de automóvel,Object
+esburacar,Action
+câmbio negro,Hard
+Cidadão Kane,Fun
+poligamia,Mix
+anão,Person
+trabuco,Object
+brincar,Action
+bucha,Hard
+Hortênsia,Fun
+perspectiva,Mix
+padeiro,Person
+bolha de sabão,Object
+dar no pé,Action
+ferida,Hard
+Airton Senna,Fun
+senha (código),Mix
+pensão,Person
+caixa registradora,Object
+sacar,Action
+lombada,Hard
+música clássica,Fun
+trigo,Mix
+garra,Person
+farda,Object
+podar,Action
+tabelião,Hard
+cineclube,Fun
+cobre,Mix
+caolho,Person
+escorredor de macarrão,Object
+correr atrás,Action
+pesadelo,Hard
+Regina Duarte,Fun
+calmante,Mix
+juiz,Person
+bazuca,Object
+afagar,Action
+debate,Hard
+Rin-tin-tin,Fun
+Pisca-pisca,Mix
+varanda,Person
+carrinho de chá,Object
+ficar na lona,Action
+psicodélico,Hard
+raspadinha,Fun
+redoma,Mix
+janguço,Person
+riacho,Object
+ajoelhar,Action
+lampião,Hard
+Tim Maia,Fun
+aquário (de peixes),Mix
+digitador,Person
+piso,Object
+inflamar,Action
+crueldade,Hard
+trapezista,Fun
+tradução,Mix
+açougue,Person
+tacho,Object
+abandonar,Action
+bípede,Hard
+Os Dez Mandamentos,Fun
+goma,Mix
+Maquiavél,Person
+galho,Object
+aderir,Action
+incerteza,Hard
+Sivuca,Fun
+redação,Mix
+Himalaia,Person
+fivela,Object
+simular,Action
+civilização,Hard
+tia Anastácia,Fun
+pilha,Mix
+empregada,Person
+Panela de pressão,Object
+amamentar,Action
+galanteador,Hard
+mafalda,Fun
+programa,Mix
+míope,Person
+persiana,Object
+engatinhar,Action
+imagem,Hard
+noite de autógrafos,Fun
+partido,Mix
+fogosa,Person
+sela,Object
+sair,Action
+umbilical,Hard
+xilofone,Fun
+hipotenusa,Mix
+pastor,Person
+caminhão basculante,Object
+embalsamar,Action
+inibição,Hard
+Pernalonga,Fun
+frase,Mix
+oficina,Person
+carteira escolar,Object
+embaralhar,Action
+combustão,Hard
+A Família Adams,Fun
+bebida,Mix
+Esponja-do-mar,Person
+balança de farmácia,Object
+abastecer,Action
+Papa-defuntos,Hard
+Gugu Liberato,Fun
+ouro,Mix
+maluco,Person
+cartucheira,Object
+amanhecer,Action
+capacidade,Hard
+Juca Chaves,Fun
+carreata,Mix
+músico,Person
+anzol,Object
+borrar,Action
+informação,Hard
+FM,Fun
+corrimão,Mix
+Cavalo-do-mar,Person
+caixa de som,Object
+taxiar,Action
+adoção,Hard
+Trem-fantasma,Fun
+tarifa,Mix
+pororoca,Person
+talheres,Object
+mudar o curso,Action
+bordel,Hard
+mímica,Fun
+lotação,Mix
+burro,Person
+adesivo,Object
+engarrafar,Action
+elefantíase,Hard
+bola de rúgbi,Fun
+engradado,Mix
+pajé,Person
+rodo,Object
+atropelar,Action
+cansado,Hard
+tango,Fun
+pão,Mix
+marinheiro,Person
+depilador,Object
+pegar fogo,Action
+tragédia,Hard
+bola sete,Fun
+popa,Mix
+memória,Person
+conservas,Object
+acasalar,Action
+zona,Hard
+pulgas amestradas,Fun
+multa,Mix
+solteira,Person
+torre,Object
+carimbar,Action
+desempregado,Hard
+feijões saltadores,Fun
+trovão,Mix
+cheirosa,Person
+trava,Object
+desarmar,Action
+garupa,Hard
+numismática,Fun
+Concorde (avião),Mix
+mamute,Person
+catraca,Object
+grampear,Action
+paranóico,Hard
+Luis Gonzaga,Fun
+íon,Mix
+vespa,Person
+Pé-de-pato,Object
+engaiolar,Action
+profeta,Hard
+bola na rede,Fun
+maço de cigarros,Mix
+cardume,Person
+buraco da fechadura,Object
+cacarejar,Action
+liquidação,Hard
+Hulk,Fun
+extraterrestre,Mix
+marajá,Person
+espinha de peixe,Object
+estender os braços,Action
+arapuca,Hard
+flauta,Fun
+congestionamento,Mix
+fígado,Person
+juba,Object
+cruzar,Action
+pó,Hard
+concurso de calouros,Fun
+saco,Mix
+Serra Pelada,Person
+garrafão,Object
+plantar bananeira,Action
+horário,Hard
+Fernando Sabino,Fun
+McDonald’s,Mix
+iluminado,Person
+jangada,Object
+abaixar,Action
+Obra-prima,Hard
+luta livre,Fun
+prensa,Mix
+miado,Person
+soquete,Object
+desenrolar,Action
+aborto,Hard
+Expresso da Meia Noite,Fun
+farol,Mix
+língua,Person
+torradeira,Object
+circular,Action
+soro,Hard
+Carlos Zéfiro,Fun
+Xerox,Mix
+Mikhail Gorbachev,Person
+cipó,Object
+penetrar,Action
+quilo,Hard
+engolidor de espadas,Fun
+vista,Mix
+tucano,Person
+almofada,Object
+empalhar,Action
+furar a fila,Hard
+dó (nota),Fun
+metal,Mix
+bêbado,Person
+bule,Object
+provar,Action
+destino,Hard
+Pateta,Fun
+palestra,Mix
+porão,Person
+Criado-mudo,Object
+catequizar,Action
+naftalina,Hard
+Deus e o Diabo na Terra do Sol,Fun
+chapa,Mix
+Nero,Person
+bexiga de gás,Object
+jogar fora,Action
+naufrágio,Hard
+bola na trave,Fun
+calendário,Mix
+ema,Person
+cacho de uva,Object
+encaçapar,Action
+viscoso,Hard
+Flash Gordon,Fun
+panela,Mix
+mercado,Person
+botão de rosa,Object
+derramar,Action
+genocídio,Hard
+Escolinha do Professor Raimundo,Fun
+neblina,Mix
+risada,Person
+Quebra-nozes,Object
+chupar,Action
+breu,Hard
+conjunto de rock,Fun
+sabão,Mix
+anormal,Person
+curativo,Object
+indicar,Action
+vizinho,Hard
+velejar,Fun
+comício,Mix
+centro,Person
+galinheiro,Object
+vibrar,Action
+zumbido,Hard
+reggae,Fun
+cúmulo (nuvem),Mix
+crista,Person
+canoa,Object
+picotar,Action
+imediato,Hard
+buraco (jogo),Fun
+luminária,Mix
+Palácio do Planalto,Person
+bisturi,Object
+acorrentar,Action
+chantagem,Hard
+Ney Matogrosso,Fun
+cerveja,Mix
+bangalô,Person
+poço,Object
+arrepiar os cabelos,Action
+fotossíntese,Hard
+Pepe Legal,Fun
+frango assado,Mix
+rainha,Person
+veleiro,Object
+falar com a parede,Action
+indignado,Hard
+Dustin Hoffman,Fun
+grito,Mix

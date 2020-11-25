@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus.CREATED
 import org.springframework.http.HttpStatus.OK
 import org.springframework.http.MediaType.APPLICATION_JSON_VALUE
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.multipart.MultipartFile
 
 @Api(value = "Image&Action - Person Manager API")
 @RequestMapping(value = ["/v1/people"], produces = [APPLICATION_JSON_VALUE])
@@ -18,6 +19,12 @@ interface PersonAPI {
     @ResponseStatus(CREATED)
     @PostMapping(consumes = [APPLICATION_JSON_VALUE])
     fun person(@RequestBody personRequest: PersonRequest): PersonResponse
+
+    @ApiOperation(value = "Upload file with person phrases")
+    @ApiResponse(code = 200, message = "File uploaded")
+    @ResponseStatus(OK)
+    @PostMapping
+    fun upload(@RequestParam("file") file: MultipartFile)
 
     @ApiOperation(value = "Get some person")
     @ApiResponse(code = 200, message = "OK")
